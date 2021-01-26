@@ -1,11 +1,14 @@
+import React from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
+import QuizLogo from '../src/components/QuizLogo';
 import Head from '../src/components/Head';
-
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -26,29 +29,51 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
   return (
     <>
-    <Head url={db.url} bg={db.bg} title={db.title} description={db.description} />
-    <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <Widget>
-          <Widget.Header>
-            <h1>90s Animes</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>Teste os seus conhecimentos sobre animes da década de 90!</p>
-          </Widget.Content>
-        </Widget>
-        <Widget>
-          <Widget.Content>
-            <h1>Quizzes Anime da Galera</h1>
-            <p>Links mais tarde :D</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner />
-    </QuizBackground>
+      <Head url={db.url} bg={db.bg} title={db.title} description={db.description} />
+      <QuizBackground backgroundImage={db.bg}>
+        <QuizContainer>
+          <QuizLogo />
+          <Widget>
+            <Widget.Header>
+              <h1>90s Animes</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <p>Teste os seus conhecimentos sobre animes da década de 90!</p>
+              <form onSubmit={(infosDoEvento) => {
+                infosDoEvento.preventDefault();
+                router.push(`/quiz?name=${name}`);
+                // Router manda para a próxima página
+              }}
+              >
+                <input
+                  onChange={(infosDoEvento) => {
+                    // name = infosDoEvento.target.value;
+                    setName(infosDoEvento.target.value);
+                  }}
+                  placeholder="Diz ai seu nome"
+                />
+                <button type="submit" disabled={name.length === 0}>
+                  JOGAR
+                  { ' ' }
+                  {name}
+                </button>
+              </form>
+            </Widget.Content>
+          </Widget>
+          <Widget>
+            <Widget.Content>
+              <h1>Quizzes Anime da Galera</h1>
+              <p>Links mais tarde :D</p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GitHubCorner />
+      </QuizBackground>
     </>
   );
 }
