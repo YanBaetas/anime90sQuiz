@@ -46,6 +46,33 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+  input {
+    color: ${({ theme }) => theme.colors.contrastText};
+    background-color: ${({ theme }) => theme.colors.mainBg};
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid ${({ theme }) => theme.colors.primary};
+    outline: none;
+    transition: .4s;
+  }
+  input:focus {
+    border-color: ${({ theme }) => theme.colors.secondary};
+  }
+  button {
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    width: 100%;
+    height: 32px;
+    color: ${({ theme }) => theme.colors.contrastText};
+    margin-top: 25px;
+    background: ${({ theme }) => theme.colors.secondary};
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);    
+  }
 `;
 
 export default Widget;

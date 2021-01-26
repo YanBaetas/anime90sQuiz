@@ -1,6 +1,10 @@
+import React from 'react';
 import Head from 'next/head';
 
-function IndexHome({url, bg, title, description}) {
+function IndexHome({
+  // eslint-disable-next-line react/prop-types
+  url, bg, title, description,
+}) {
   return (
     <Head>
       <title>{title}</title>
@@ -19,7 +23,7 @@ function IndexHome({url, bg, title, description}) {
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={bg} />
     </Head>
-  )
+  );
 }
 
 export default IndexHome;
