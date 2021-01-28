@@ -5,25 +5,63 @@
   "description": "Teste os seus conhecimentos sobre animes da década de 90 e vamos nos divertir",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "image": "https://i.pinimg.com/originals/1f/9d/a3/1f9da3a8c930b30e27f6c479f881716f.gif",
+      "title": "Em Digimon Adventure (Primeira série), quantas crianças são os Digiescolhidos?",
+      "description": "A primeira é fácil!",
+      "answer": 3,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "10",
+        "7",
+        "8",
+        "9"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://static.wikia.nocookie.net/yuyuhakusho/images/0/05/Kuwabara_Spirit_Sword.gif",
+      "title": "Em Yu Yu Hakusho, a técnica principal de Kuwabara se chama Espada Espiritual. Posteriormente essa técnica é aprimorada e passa a ser chamada de: ",
+      "description": "Vamos aquecer!",
+      "answer": 2,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Espada Sagrada",
+         "Espada Dimensional",
+         "Espada das Trevas",
+         "Espada Celeste"
+      ]
+    },
+    {
+      "image": "https://steamuserimages-a.akamaihd.net/ugc/861730723813110787/438E168983EEC604290F14E06F05D16106532BAD/",
+      "title": "Em Slayers, Lina Inverse é a protagonista da série e uma famosa feiticeira. Sua principal magia se chama: ",
+      "description": "Aquecimento concluído! Vamos lá!",
+      "answer": 1,
+      "alternatives": [
+         "Dragon Slave",
+         "Dragon Slayer",
+         "Dragon Blast",
+         "Dragon Blade"
+      ]
+    },
+    {
+      "image": "https://i.pinimg.com/originals/d2/11/f2/d211f24881c279a942c72814e6f618df.gif",
+      "title": "Sailor Moon no Brasil deu à protagonista o nome de Serena Tsukino, porém seu nome original no japonês é:",
+      "description": "Essa é mais complicada!",
+      "answer": 3,
+      "alternatives": [
+         "Tsukino Neko",
+         "Tsukino Sakura",
+         "Tsukino Usagi",
+         "Tsukino Ami"
+      ]
+    },
+    {
+      "image": "https://i.pinimg.com/originals/e4/9a/9b/e49a9b1aa7e5565f9ae2d0e090c606f0.gif",
+      "title": "Em Hunter x Hunter há diversos tipos de Nen. O tipo de aura utilizado por Killua é:",
+      "description": "Você chegou na última pergunta, parabéns!",
+      "answer": 3,
+      "alternatives": [
+         "Intensificação",
+         "Manipulação",
+         "Emissão",
+         "Transformação"
       ]
     }
   ],
