@@ -66,7 +66,11 @@
     }
   ],
   "external": [
-    ""
+    "https://animequiz.ffsf-filho.vercel.app/",
+    "https://quiz-one-piece.rodrigorvsn.vercel.app/",
+    "https://next-quiz.jeffersondenilson.vercel.app/",
+    "https://pokemon-alura-quiz-2021.kaugoncalves.vercel.app/"
+
   ],
   "theme": {
     "colors": {
