@@ -8,6 +8,7 @@ import QuizLogo from '../../components/QuizLogo';
 import QuizContainer from '../../components/QuizContainer';
 import Button from '../../components/Button';
 import AlternativesForm from '../../components/AlternativesForm';
+import QuestionResult from '../../components/QuestionResult';
 
 function ResultWidget({ results }) {
   return (
@@ -121,7 +122,7 @@ function QuestionWidget({
               onSubmit();
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
-            }, 1 * 1000);
+            }, 2 * 1200);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -152,8 +153,7 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          {isQuestionSubmited && <QuestionResult isCorrect={isCorrect} />}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
